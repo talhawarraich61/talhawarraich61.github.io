@@ -6,7 +6,7 @@
     <script>
       (function () {
         try {
-          var t = localStorage.getItem("ak-theme");
+          var t = localStorage.getItem("talha-theme");
           if (
             t === "light" ||
             (!t &&
@@ -18,18 +18,18 @@
         } catch (e) {}
       })();
     </script>
-    <title>Arsalan Kaleem — Flutter & AI Developer</title>
+    <title>GC Muhammed Talha | Information Security Student at MCS, NUST</title>
     <meta
       name="description"
-      content="Arsalan Kaleem is a Flutter & AI developer building premium mobile and desktop experiences with Firebase, Gemini AI, and modern design systems."
+      content="Meet GC Muhammed Talha, a third-semester Information Security student at MCS, NUST exploring AES modes, image encryption, C++ networking and Java projects."
     />
     <meta
       property="og:title"
-      content="Arsalan Kaleem — Flutter & AI Developer"
+      content="GC Muhammed Talha | Information Security Student at MCS, NUST"
     />
     <meta
       property="og:description"
-      content="Building premium mobile and AI-powered digital experiences."
+      content="A third-semester BEIS portfolio exploring cryptography, AES image encryption, C++ socket programming and Java."
     />
     <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -854,6 +854,12 @@
         display: block;
         font-size: clamp(3.4rem, 15.5vw, 13rem);
       }
+      .hero-line-gc > span {
+        font-size: clamp(1.8rem, 6vw, 5rem);
+      }
+      .hero-line-full > span {
+        font-size: clamp(3.4rem, 13vw, 11rem);
+      }
       .hero-name .char {
         display: inline-block;
         will-change: transform, filter, opacity;
@@ -1102,6 +1108,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center 12%;
+        transform: scale(1.05);
+        transform-origin: center top;
         transition: opacity 0.45s var(--ease);
       }
       .portrait-light {
@@ -1198,7 +1207,7 @@
         color: var(--bone);
       }
 
-      /* ─── SERVICES ─────────────────────────────────────────── */
+      /* ─── SKILLS ──────────────────────────────────────────── */
       #skills {
         padding: clamp(5rem, 11vw, 9rem) 0;
         border-top: 1px solid var(--line);
@@ -1259,8 +1268,8 @@
         white-space: nowrap;
       }
 
-      /* ─── WORK (sticky stack) ──────────────────────────────── */
-      #work {
+      /* ─── PROJECTS ────────────────────────────────────────── */
+      #projects {
         padding: clamp(5rem, 11vw, 9rem) 0 0;
         border-top: 1px solid var(--line);
       }
@@ -1802,6 +1811,11 @@
         max-width: 42ch;
         margin-bottom: 2.5rem;
       }
+      .contact-grid,
+      .contact-grid > div,
+      .form {
+        min-width: 0;
+      }
       .socials {
         display: flex;
         flex-direction: column;
@@ -2199,7 +2213,13 @@
           padding-bottom: 0.06em;
         }
         .hero-line span {
-          font-size: clamp(2.9rem, 15vw, 4.6rem);
+          font-size: clamp(2.9rem, 12.5vw, 4.6rem);
+        }
+        .hero-line-gc > span {
+          font-size: clamp(1.8rem, 7vw, 3rem);
+        }
+        .hero-line-full > span {
+          font-size: clamp(2.35rem, 11vw, 4.1rem);
         }
         .hero-meta {
           flex-direction: column;
@@ -2244,6 +2264,18 @@
           font-size: clamp(2.4rem, 12vw, 3.6rem);
           margin-bottom: 1.5rem;
         }
+        .contact-sub {
+          max-width: none;
+        }
+        .social {
+          overflow-wrap: anywhere;
+        }
+        .f-input,
+        .f-textarea,
+        .f-submit {
+          width: 100%;
+          max-width: 100%;
+        }
         .foot-statement {
           font-size: clamp(1.5rem, 7vw, 2.2rem);
         }
@@ -2255,7 +2287,7 @@
         #contact {
           padding: 3.5rem 0;
         }
-        #work {
+        #projects {
           padding-top: 3.5rem;
         }
         .panel {
@@ -2347,6 +2379,44 @@
       .lenis.lenis-stopped {
         overflow: hidden;
       }
+
+      /* PERSONALIZED PORTFOLIO ADDITIONS */
+      .portrait-avatar {
+        position: absolute; inset: 0;
+        display: flex; align-items: center; justify-content: center;
+        font-family: var(--font-display); font-weight: 800;
+        font-size: clamp(7rem, 16vw, 12rem); letter-spacing: -0.09em;
+        color: var(--bone);
+        background: radial-gradient(circle at 68% 28%, rgba(236,232,225,.08), transparent 50%),
+                    linear-gradient(150deg, var(--ink-3), var(--ink));
+        user-select: none;
+      }
+      .portrait-avatar::after {
+        content: ""; position: absolute; inset: 9%;
+        border: 1px solid var(--line-2); border-radius: 50%;
+        pointer-events: none;
+      }
+      .coursework-header { margin: 0 auto 1.5rem; max-width: var(--maxw); }
+      .coursework-intro { font-size: .97rem; color: var(--ash); line-height: 1.7; max-width: 60ch; margin: 0 0 1.6rem; }
+      .coursework-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0 0 5rem; }
+      .course-card { background: var(--ink-2); border: 1px solid var(--line); border-radius: 4px; padding: clamp(1.4rem, 2.6vw, 2rem); min-width: 0; transition: border-color .3s, transform .3s; }
+      .course-card:hover { border-color: var(--line-2); transform: translateY(-4px); }
+      .course-number { font-family: var(--font-mono); text-transform: uppercase; color: var(--faint); font-size: .7rem; margin-bottom: 2.6rem; }
+      .course-title { font-family: var(--font-display); font-size: clamp(1.3rem, 2vw, 1.75rem); line-height: 1.16; letter-spacing: -.025em; margin-bottom: 1rem; color: var(--bone); }
+      .course-desc { font-size: .88rem; line-height: 1.7; color: var(--ash); }
+      .course-divider { border: 0; border-top: 1px solid var(--line); margin: 0 0 2.75rem; }
+      .social-pending { opacity: .6; cursor: default; }
+      .form-note { color: var(--ash); font-size: .75rem; margin-top: 1rem; line-height: 1.6; }
+      @media (max-width: 880px) { .coursework-grid { grid-template-columns: 1fr; } .course-number { margin-bottom: 1.5rem; } }
+
+      /* Individual portrait and project progress labels */
+      .portrait-img.portrait-personal { opacity: 1; object-position: center 15%; }
+      .project-status {
+        display: inline-block; margin-top: 1.5rem; padding: 0.42rem 0.75rem;
+        border: 1px solid var(--line-2); border-radius: 30px;
+        font-family: var(--font-mono); font-size: 0.69rem;
+        letter-spacing: 0.04em; text-transform: uppercase; color: var(--ash);
+      }
     </style>
   </head>
   <body>
@@ -2373,7 +2443,7 @@
     <div id="loader" aria-hidden="true">
       <div class="l-glow"></div>
       <div class="l-inner">
-        <div class="l-mark">AK</div>
+        <div class="l-mark">MT</div>
         <div class="l-bar"><i></i></div>
         <div class="l-num">000</div>
       </div>
@@ -2387,12 +2457,11 @@
     <!-- nav -->
     <nav id="nav" aria-label="Main navigation">
       <div class="nav-bg" aria-hidden="true"></div>
-      <a href="#hero" class="nav-logo" id="logo">Arsalan Kaleem</a>
+      <a href="#hero" class="nav-logo" id="logo">GC Muhammed Talha</a>
       <div class="nav-links">
         <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Services</a>
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#publications" class="nav-link">Publications</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
       <div class="nav-actions">
@@ -2430,9 +2499,6 @@
             <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
           </svg>
         </button>
-        <button class="nav-cta" data-cursor="SEND" onclick="goTo('#contact')">
-          Hire me
-        </button>
         <button id="nav-burger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -2440,9 +2506,8 @@
     </nav>
     <div id="nav-overlay">
       <div class="ov-link"><a href="#about" data-close>About</a></div>
-      <div class="ov-link"><a href="#skills" data-close>Services</a></div>
-      <div class="ov-link"><a href="#work" data-close>Work</a></div>
-      <div class="ov-link"><a href="#publications" data-close>Publications</a></div>
+      <div class="ov-link"><a href="#skills" data-close>Skills</a></div>
+      <div class="ov-link"><a href="#projects" data-close>Projects</a></div>
       <div class="ov-link"><a href="#contact" data-close>Contact</a></div>
     </div>
 
@@ -2450,32 +2515,28 @@
       <!-- HERO -->
       <section id="hero">
         <div class="hero-top">
-          <div class="hero-eyebrow">
-            <span class="dot" id="dot" title="psst…"></span
-            ><span class="mono">Available for work</span>
-          </div>
           <div class="hero-copyright">
             <div class="mono">©2026</div>
-            <div class="mono">/ Creating since 2022</div>
+            <div class="mono">/ Student portfolio</div>
           </div>
         </div>
         <div class="shell hero-inner">
-          <h1 class="hero-name" aria-label="Arsalan Kaleem">
-            <span class="hero-line"><span>Arsalan</span></span>
-            <span class="hero-line"><span>Kaleem</span></span>
+          <h1 class="hero-name" aria-label="GC Muhammed Talha">
+            <span class="hero-line hero-line-gc"><span>GC</span></span>
+            <span class="hero-line hero-line-full"><span>Muhammed</span></span>
+            <span class="hero-line hero-line-full"><span>Talha</span></span>
           </h1>
           <div class="hero-meta">
             <p class="hero-sub anim">
-              Flutter &amp; AI Developer building scalable mobile applications,
-              AI-powered products, and modern digital experiences.
+              3rd-semester Information Security student at MCS, NUST, exploring AES encryption modes, image security and practical coding.
             </p>
             <div class="hero-actions anim">
               <a
-                href="#work"
+                href="#projects"
                 class="btn btn-solid"
                 data-cursor="VIEW"
                 onclick="
-                  goTo('#work');
+                  goTo('#projects');
                   return false;
                 "
                 ><span class="btn-t"
@@ -2507,608 +2568,106 @@
       <!-- MARQUEE -->
       <div class="marquee" aria-hidden="true">
         <div class="marquee-track">
-          <span class="marquee-item">Flutter</span>
-          <span class="marquee-item">Dart</span>
-          <span class="marquee-item">Firebase</span>
-          <span class="marquee-item">Riverpod</span>
-          <span class="marquee-item">REST APIs</span>
-          <span class="marquee-item">WebRTC</span>
-          <span class="marquee-item">Docker</span>
-          <span class="marquee-item">Git</span>
-          <span class="marquee-item">GitHub</span>
-          <span class="marquee-item">Windows Desktop</span>
-
-          <!-- Duplicate for seamless scrolling -->
-          <span class="marquee-item">Flutter</span>
-          <span class="marquee-item">Dart</span>
-          <span class="marquee-item">Firebase</span>
-          <span class="marquee-item">Riverpod</span>
-          <span class="marquee-item">REST APIs</span>
-          <span class="marquee-item">WebRTC</span>
-          <span class="marquee-item">Docker</span>
-          <span class="marquee-item">Git</span>
-          <span class="marquee-item">GitHub</span>
-          <span class="marquee-item">Windows Desktop</span>
+          <span class="marquee-item">C++</span>
+          <span class="marquee-item">JAVA</span>
+          <span class="marquee-item">CRYPTOGRAPHY</span>
+          <span class="marquee-item">AES MODES</span>
+          <span class="marquee-item">IMAGE ENCRYPTION</span>
+          <span class="marquee-item">SOCKETS</span>
+          <span class="marquee-item">INFORMATION SECURITY</span>
+          <span class="marquee-item">DATA STRUCTURES</span>
+          <span class="marquee-item">C++</span>
+          <span class="marquee-item">JAVA</span>
+          <span class="marquee-item">CRYPTOGRAPHY</span>
+          <span class="marquee-item">AES MODES</span>
+          <span class="marquee-item">IMAGE ENCRYPTION</span>
+          <span class="marquee-item">SOCKETS</span>
+          <span class="marquee-item">INFORMATION SECURITY</span>
+          <span class="marquee-item">DATA STRUCTURES</span>
         </div>
       </div>
 
       <!-- ABOUT -->
       <section id="about">
         <div class="shell">
-          <div class="sec-head">
-            <span class="tag">About</span><span class="sec-line"></span>
-          </div>
+          <div class="sec-head"><span class="tag">About</span><span class="sec-line"></span></div>
           <div class="about-grid">
             <div>
-              <h2 class="about-hello" id="about-hello">
-                Building scalable applications with <em>Flutter &amp; AI.</em>
-              </h2>
-              <p class="about-body anim">
-                I'm a final-year Computer Science student at
-                <b>Shaikh Ayaz University, Shikarpur</b>, specializing in
-                <b>Flutter development</b> and <b>AI-powered applications</b>. I
-                build cross-platform applications for mobile, Windows desktop,
-                and the web with a focus on clean architecture, performance, and
-                intuitive user experiences.
-              </p>
-              <p class="about-body anim">
-                My work includes <b>Firebase</b>, <b>Gemini AI</b>,
-                <b>WebRTC</b>, REST APIs, and real-time systems. I enjoy solving
-                complex engineering problems and building reliable, scalable
-                software that delivers meaningful value to users.
-              </p>
-              <div class="certs">
-                <span class="cert anim">Google UX Design</span>
-                <span class="cert anim">Meta Front-End</span>
-                <span class="cert anim">Android Development</span>
-                <span class="cert anim">Scrimba React</span>
-                <span class="cert anim">Firebase</span>
+              <h2 class="about-hello" id="about-hello">Learning the science behind <em>secure systems.</em></h2>
+              <p class="about-body anim">I'm Muhammed Talha, a third-semester <b>Bachelor of Engineering in Information Security (BEIS)</b> student at the <b>Military College of Signals (MCS), NUST</b>. My academic focus is on understanding the theory behind secure computing and applying it through practical programming.</p>
+              <p class="about-body anim">I work primarily with C++ and Java, and I'm developing a stronger foundation in cryptography. Recently, I've been exploring AES encryption modes through image-based experiments, including how a change in ciphertext affects the image after decryption.</p>
+              <p class="about-body anim">Alongside this, I've worked on client–server socket communication exercises and am planning a Java password-manager project. I value clear reasoning, careful testing and explaining what a program actually does. This portfolio documents my coursework, current experiments and progress as an Information Security student.</p>
+              <div class="certs" aria-label="Technical skills and current research interests">
+                <span class="cert anim">C++</span><span class="cert anim">Java</span><span class="cert anim">Cryptography</span><span class="cert anim">AES modes</span><span class="cert anim">Image encryption</span>
               </div>
             </div>
             <div>
               <div class="about-portrait" id="portrait">
-                <img
-                  class="portrait-img portrait-dark"
-                  src="https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782695912/image_ao9slm.jpg"
-                  alt="Arsalan Kaleem"
-                />
-                <img
-                  class="portrait-img portrait-light"
-                  src="https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782696532/ChatGPT_Image_Jun_29_2026_06_27_38_AM_p1zweb.png"
-                  alt=""
-                  aria-hidden="true"
-                />
-                <div class="corner">
-                  <div>
-                    <div class="portrait-stat" data-count="12" data-suffix="+">
-                      0
-                    </div>
-                    <div class="mono" style="margin-top: 0.3rem">
-                      Projects shipped
-                    </div>
-                  </div>
-                  <div class="mono" style="text-align: right">
-                    Shikarpur,<br />Pakistan
-                  </div>
-                </div>
+                <img class="portrait-img portrait-personal" src="assets/me.jpeg" width="480" height="600" alt="GC Muhammed Talha, Information Security student at MCS, NUST" loading="eager" decoding="async" />
+                <div class="corner"><div>
+                  <div class="portrait-stat" data-count="3" data-suffix="">3</div>
+                  <div class="mono" style="margin-top: 0.3rem">Projects &amp; learning areas</div>
+                </div></div>
               </div>
-              <div class="timeline">
-                <div class="t-row anim">
-                  <div class="t-year">2025</div>
-                  <div>
-                    <div class="t-role">SDGs in Sindh</div>
-                    <div class="t-place">
-                      Google Earth Engine · QGIS · Sentinel-1 & Sentinel-2 ·
-                      Remote Sensing
-                    </div>
-                  </div>
-                </div>
-
-                <div class="t-row anim">
-                  <div class="t-year">2024</div>
-                  <div>
-                    <div class="t-role">AI Application Development</div>
-                    <div class="t-place">Gemini AI · Riverpod · Flutter</div>
-                  </div>
-                </div>
-
-                <div class="t-row anim">
-                  <div class="t-year">2023</div>
-                  <div>
-                    <div class="t-role">Professional Certifications</div>
-                    <div class="t-place">Google · Meta · Coursera</div>
-                  </div>
-                </div>
-
-                <div class="t-row anim">
-                  <div class="t-year">2023</div>
-                  <div>
-                    <div class="t-role">BS Computer Science</div>
-                    <div class="t-place">Shaikh Ayaz University, Shikarpur</div>
-                  </div>
-                </div>
+              <div class="timeline" aria-label="Academic and project highlights">
+                <div class="t-row anim"><div class="t-year">2026</div><div><div class="t-role">BE Information Security</div><div class="t-place">Third semester · MCS, NUST</div></div></div>
+                <div class="t-row anim"><div class="t-year">2026</div><div><div class="t-role">AES modes &amp; image encryption</div><div class="t-place">Cryptography experiments · In progress</div></div></div>
+                <div class="t-row anim"><div class="t-year">2026</div><div><div class="t-role">C++ &amp; Java programming</div><div class="t-place">Socket labs · Java OOP · Password manager concept</div></div></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICES -->
+      <!-- SKILLS -->
       <section id="skills">
         <div class="shell">
-          <div class="sec-head">
-            <span class="tag">Services</span><span class="sec-line"></span
-            ><span class="sec-title">What I do</span>
-          </div>
-          <div class="svc-row anim">
-            <div class="svc-num">01</div>
-            <div class="svc-name">Mobile &amp; Desktop Apps</div>
-            <div class="svc-tags">
-              <span class="svc-tag">Flutter</span>
-              <span class="svc-tag">Dart</span>
-              <span class="svc-tag">Riverpod</span>
-              <span class="svc-tag">GoRouter</span>
-              <span class="svc-tag">Windows Desktop</span>
-              <span class="svc-tag">Android</span>
-            </div>
-          </div>
-
-          <div class="svc-row anim">
-            <div class="svc-num">02</div>
-            <div class="svc-name">Backend &amp; Data</div>
-            <div class="svc-tags">
-              <span class="svc-tag">Firebase</span>
-              <span class="svc-tag">Supabase</span>
-              <span class="svc-tag">Docker</span>
-              <span class="svc-tag">FastAPI</span>
-              <span class="svc-tag">REST APIs</span>
-              <span class="svc-tag">PostgreSQL</span>
-            </div>
-          </div>
-
-          <div class="svc-row anim">
-            <div class="svc-num">03</div>
-            <div class="svc-name">Web &amp; Tools</div>
-            <div class="svc-tags">
-              <span class="svc-tag">React</span>
-              <span class="svc-tag">JavaScript</span>
-              <span class="svc-tag">TypeScript</span>
-              <span class="svc-tag">Vanilla JS/HTML</span>
-              <span class="svc-tag">Git/GitHub</span>
-              <span class="svc-tag">Node.js</span>
-            </div>
-          </div>
-
-          <div class="svc-row anim">
-            <div class="svc-num">04</div>
-            <div class="svc-name">Real-Time Systems</div>
-            <div class="svc-tags">
-              <span class="svc-tag">LiveKit</span>
-              <span class="svc-tag">WebRTC</span>
-              <span class="svc-tag">mediasoup SFU</span>
-              <span class="svc-tag">Watch-Party Sync</span>
-            </div>
-          </div>
+          <div class="sec-head"><span class="tag">Skills</span><span class="sec-line"></span><span class="sec-title">My technical toolkit</span></div>
+          <div class="svc-row anim"><div class="svc-num">01</div><div class="svc-name">C++</div><div class="svc-tags"><span class="svc-tag">Data structures</span><span class="svc-tag">Socket communication</span><span class="svc-tag">Algorithms</span></div></div>
+          <div class="svc-row anim"><div class="svc-num">02</div><div class="svc-name">Java</div><div class="svc-tags"><span class="svc-tag">Object-oriented programming</span><span class="svc-tag">GUI coursework</span><span class="svc-tag">Problem solving</span></div></div>
+          <div class="svc-row anim"><div class="svc-num">03</div><div class="svc-name">Cryptography</div><div class="svc-tags"><span class="svc-tag">AES modes</span><span class="svc-tag">Image encryption</span><span class="svc-tag">Error propagation</span><span class="svc-tag">Finite fields</span></div></div>
         </div>
       </section>
 
-      <!-- WORK -->
-      <section id="work">
-        <div class="shell">
-          <div class="sec-head">
-            <span class="tag">Selected work</span><span class="sec-line"></span
-            ><span class="sec-title">Things I've built</span>
-          </div>
-        </div>
+      <!-- PROJECTS -->
+      <section id="projects">
+        <div class="shell"><div class="sec-head"><span class="tag">Projects</span><span class="sec-line"></span><span class="sec-title">Work &amp; experiments</span></div></div>
 
+        <div class="shell coursework-header">
+          <p class="tag">ICT course &amp; lab focus</p>
+          <p class="coursework-intro">Areas covered by my CS-117 Applications of ICT coursework. The first two are course topics, not claims of completed submissions; this portfolio is the practical web-publishing assignment.</p>
+          <div class="coursework-grid">
+            <article class="course-card anim"><div class="course-number">ICT / Lab 03 · Course topic</div><h3 class="course-title">Networks &amp; Collaboration</h3><p class="course-desc">Network communication fundamentals and collaboration between connected systems.</p></article>
+            <article class="course-card anim"><div class="course-number">ICT / Lab 08 · Course topic</div><h3 class="course-title">Cloud Collaboration</h3><p class="course-desc">Cloud-based teamwork, shared resources and collaborative workflows.</p></article>
+            <article class="course-card anim"><div class="course-number">ICT / Assignment 02 · Portfolio</div><h3 class="course-title">GitHub Pages Website</h3><p class="course-desc">Customizing an open-source HTML/CSS/JavaScript portfolio and preparing it for public hosting on GitHub Pages.</p></article>
+          </div>
+          <p class="tag">Featured academic projects</p><hr class="course-divider" />
+        </div>
         <div class="stack">
-          <!-- Panel 2 -->
           <article class="panel" style="--tint: rgba(150, 170, 255, 0.06)">
-            <div class="shell panel-grid">
-              <div class="panel-visual" data-cursor="VIEW">
-                <span class="panel-bgmark">CG</span>
-                <div class="ph-stage">
-                  <div class="phone-float">
-                    <div
-                      class="phone"
-                      data-shots="careergpt"
-                      aria-label="CareerGPT screenshots"
-                    >
-                      <div class="ph-body">
-                        <div class="ph-screen">
-                          <div class="ph-cam" aria-hidden="true"></div>
-                          <div class="ph-glare" aria-hidden="true"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ph-ground" aria-hidden="true"></div>
-                  </div>
-                  <div
-                    class="ph-dots"
-                    data-dots="careergpt"
-                    aria-label="CareerGPT screenshots"
-                  ></div>
-                </div>
-              </div>
-              <div class="panel-info">
-                <div class="panel-num">01 — AI Application</div>
-                <h3 class="panel-title">AESTIMO</h3>
-                <p class="panel-desc">
-                  An AI-powered career assistant that scores resumes, generates
-                  ATS-optimised CVs, and provides interview coaching — built
-                  with Flutter, Riverpod, and Gemini 2.5 Flash. Features PDF
-                  generation and real-time streaming responses.
-                </p>
-                <div class="panel-tags">
-                  <span class="panel-tag">Flutter</span
-                  ><span class="panel-tag">Gemini AI</span
-                  ><span class="panel-tag">Riverpod</span
-                  ><span class="panel-tag">Firebase</span
-                  ><span class="panel-tag">PDF</span
-                  ><span class="panel-tag">Windows</span>
-                </div>
-                <div class="panel-links">
-                  <a
-                    href="https://aestimo-career-copilot.web.app"
-                    class="btn btn-solid"
-                    data-cursor="OPEN"
-                    ><span class="btn-t"
-                      >View project
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M1 11L11 1M11 1H4M11 1V8"
-                          stroke="currentColor"
-                          stroke-width="1.4"
-                          stroke-linecap="round"
-                        /></svg></span
-                  ></a>
-                  <a
-                    href="https://github.com/ArsalanKaleem/Aestimo"
-                    class="btn btn-ghost"
-                    data-cursor="VISIT"
-                    ><span class="btn-t">GitHub</span></a
-                  >
-                </div>
+            <div class="shell panel-grid"><div class="panel-visual" data-cursor="VIEW"><span class="panel-bgmark">AES</span></div>
+              <div class="panel-info"><div class="panel-num">01 — Cryptography experiment</div><h3 class="panel-title">AES Image Encryption &amp; Error Propagation</h3>
+                <p class="panel-desc">Working on experiments that apply AES encryption modes to image data and compare how changing one ciphertext bit affects decrypted output. The focus is understanding mode behavior, not claiming a finished product.</p>
+                <div class="panel-tags"><span class="panel-tag">AES modes</span><span class="panel-tag">Image encryption</span><span class="panel-tag">Error propagation</span></div>
+                <span class="project-status">Status: in progress</span>
               </div>
             </div>
           </article>
-
           <article class="panel flip" style="--tint: rgba(150, 255, 190, 0.05)">
-            <div class="shell panel-grid">
-              <div class="panel-visual" data-cursor="VIEW">
-                <span class="panel-bgmark">S</span>
-                <div class="ph-stage">
-                  <div class="phone-float">
-                    <div
-                      class="phone"
-                      data-shots="simul"
-                      aria-label="Simul screenshots"
-                    >
-                      <div class="ph-body">
-                        <div class="ph-screen">
-                          <div class="ph-cam" aria-hidden="true"></div>
-                          <div class="ph-glare" aria-hidden="true"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ph-ground" aria-hidden="true"></div>
-                  </div>
-                  <div
-                    class="ph-dots"
-                    data-dots="simul"
-                    aria-label="Simul screenshots"
-                  ></div>
-                </div>
-              </div>
-              <div class="panel-info">
-                <div class="panel-num">02 — Real-time App</div>
-                <h3 class="panel-title">Simul</h3>
-                <p class="panel-desc">
-                  A social watch-party platform with YouTube sync, WebRTC
-                  voice/screen sharing, and a Connect4 mini-game — powered by
-                  LiveKit OSS, Firebase, and Flutter. Built for real-time
-                  connection across devices.
-                </p>
-                <div class="panel-tags">
-                  <span class="panel-tag">Flutter</span
-                  ><span class="panel-tag">LiveKit</span
-                  ><span class="panel-tag">WebRTC</span
-                  ><span class="panel-tag">Firebase</span
-                  ><span class="panel-tag">YouTube API</span>
-                </div>
-                <div class="panel-links">
-                  <a
-                    href="https://simul-deskweb-app.web.app"
-                    class="btn btn-solid"
-                    data-cursor="OPEN"
-                    ><span class="btn-t"
-                      >View project
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M1 11L11 1M11 1H4M11 1V8"
-                          stroke="currentColor"
-                          stroke-width="1.4"
-                          stroke-linecap="round"
-                        /></svg></span
-                  ></a>
-                  <a
-                    href="https://github.com/ArsalanKaleem/simul-watch-together-app"
-                    class="btn btn-ghost"
-                    data-cursor="VISIT"
-                    ><span class="btn-t">GitHub</span></a
-                  >
-                </div>
+            <div class="shell panel-grid"><div class="panel-visual" data-cursor="VIEW"><span class="panel-bgmark">NET</span></div>
+              <div class="panel-info"><div class="panel-num">02 — Programming lab</div><h3 class="panel-title">C++ Socket Client–Server Communication</h3>
+                <p class="panel-desc">A coursework exercise using C++ client and server programs to exchange data over a network, strengthening my understanding of sockets and basic network communication.</p>
+                <div class="panel-tags"><span class="panel-tag">C++</span><span class="panel-tag">Sockets</span><span class="panel-tag">Networking</span></div>
+                <span class="project-status">Status: coursework exercise</span>
               </div>
             </div>
           </article>
-
-          <!-- Panel 1 -->
-
-          <!-- Panel 3 -->
           <article class="panel" style="--tint: rgba(255, 180, 140, 0.05)">
-            <div class="shell panel-grid">
-              <div class="panel-visual" data-cursor="VIEW">
-                <span class="panel-bgmark">F1</span>
-                <div class="ph-stage">
-                  <div class="phone-float">
-                    <div
-                      class="phone"
-                      data-shots="f1vision"
-                      aria-label="F1 Vision screenshots"
-                    >
-                      <div class="ph-body">
-                        <div class="ph-screen">
-                          <div class="ph-cam" aria-hidden="true"></div>
-                          <div class="ph-glare" aria-hidden="true"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="ph-ground" aria-hidden="true"></div>
-                  </div>
-                  <div
-                    class="ph-dots"
-                    data-dots="f1vision"
-                    aria-label="F1 Vision screenshots"
-                  ></div>
-                </div>
-              </div>
-              <div class="panel-info">
-                <div class="panel-num">03 — Sports Analytics</div>
-                <h3 class="panel-title">F1 Vision</h3>
-                <p class="panel-desc">
-                  A real-time Formula 1 dashboard built with Flutter, featuring
-                  live telemetry gauges, race-control events, driver and
-                  constructor standings, interactive analytics, and season-wide
-                  insights powered by the OpenF1 and Jolpica APIs.
-                </p>
-                <div class="panel-tags">
-                  <span class="panel-tag">Flutter</span
-                  ><span class="panel-tag">Firebase</span
-                  ><span class="panel-tag">OpenF1 API</span
-                  ><span class="panel-tag">Jolpica API</span
-                  ><span class="panel-tag">Riverpod</span
-                  ><span class="panel-tag">Real-Time Analytics</span>
-                </div>
-                <div class="panel-links">
-                  <a
-                    href="https://github.com/ArsalanKaleem/F1-Vision/releases/tag/1.0.0"
-                    class="btn btn-solid"
-                    data-cursor="OPEN"
-                    ><span class="btn-t"
-                      >download<svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                      >
-                        <path
-                          d="M1 11L11 1M11 1H4M11 1V8"
-                          stroke="currentColor"
-                          stroke-width="1.4"
-                          stroke-linecap="round"
-                        /></svg></span
-                  ></a>
-                  <a
-                    href="https://github.com/ArsalanKaleem/F1-Vision"
-                    class="btn btn-ghost"
-                    data-cursor="VISIT"
-                    ><span class="btn-t">GitHub</span></a
-                  >
-                </div>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="shell">
-          <div class="mini-head anim">More projects</div>
-          <div class="mini-grid">
-            <div class="mini anim">
-              <div class="mini-num">04</div>
-              <div class="mini-name">ForgeOS</div>
-              <p class="mini-desc">
-                Discover trending repositories, find beginner-friendly issues,
-                and get AI-powered guidance for your open source journey. One
-                Flutter codebase. Five platforms. Zero backend.
-              </p>
-              <div class="mini-tags">
-                <span class="mini-tag">Flutter</span>
-                <span class="mini-tag">GitHub API</span>
-                <span class="mini-tag">Gemini AI</span>
-              </div>
-            </div>
-            <div class="mini anim">
-              <div class="mini-num">05</div>
-              <div class="mini-name">TEMPUS</div>
-              <p class="mini-desc">
-                Intelligent university timetable scheduling system using
-                Constraint Satisfaction Problem (CSP) techniques to automate
-                scheduling and reduce manual workload by over 90%.
-              </p>
-              <div class="mini-tags">
-                <span class="mini-tag">Flutter</span>
-                <span class="mini-tag">Firebase</span>
-                <span class="mini-tag">CSP</span>
-              </div>
-            </div>
-            <div class="mini anim">
-              <div class="mini-num">06</div>
-              <div class="mini-name">SWAI</div>
-              <p class="mini-desc">
-                Sindh Water Access Index (SWAI) is a geospatial analytics
-                platform that evaluates drinking-water accessibility for 5,159
-                villages across Sindh using satellite imagery, GIS analysis, and
-                Google Earth Engine.
-              </p>
-              <div class="mini-tags">
-                <span class="mini-tag">Python</span>
-                <span class="mini-tag">Google Earth Engine</span>
-                <span class="mini-tag">GIS</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PUBLICATIONS -->
-      <section id="publications">
-        <div class="shell">
-          <div class="sec-head">
-            <span class="tag">Research</span><span class="sec-line"></span
-            ><span class="sec-title">Publications</span>
-          </div>
-          <article class="publication-card">
-            <div class="publication-copy">
-              <div class="publication-type">Research publication · 2026</div>
-              <h3 class="publication-title">
-                What Open Geospatial Data Can and Cannot Tell Us About
-                Geographic Access to Rural Public Primary Care: A Village-Level
-                Case Study from Sindh, Pakistan
-              </h3>
-              <p class="publication-journal">
-                International Journal of Advanced Research
-              </p>
-              <p class="publication-meta">
-                Arsalan Kaleem · Vol. 3, No. 5 · pp. 1606–1624
-              </p>
-              <p class="publication-summary">
-                A village-level study of travel time to health facilities
-                across Sindh, Pakistan. Comparing OpenStreetMap facilities with
-                an expanded layer informed by the provincial primary-care
-                register, the research measures how missing facilities can
-                distort estimates of geographic access to care.
-              </p>
-              <div class="publication-links">
-                <a
-                  href="https://ijournalar.com/site/index.php/ijar/article/view/606"
-                  class="btn btn-solid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor="OPEN"
-                  ><span class="btn-t">Read publication</span></a
-                >
-                <a
-                  href="http://arsalankaleem.me/Rural-Healthcare-Accessibility-Index--RHAI-/"
-                  class="btn btn-ghost"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor="OPEN"
-                  ><span class="btn-t">Explore map</span></a
-                >
-                <a
-                  href="https://github.com/ArsalanKaleem/Rural-Healthcare-Accessibility-Index--RHAI-"
-                  class="btn btn-ghost"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor="VISIT"
-                  ><span class="btn-t">Research &amp; data</span></a
-                >
-              </div>
-            </div>
-            <div class="publication-findings" aria-label="Study highlights">
-              <div class="publication-stat">
-                <span class="publication-stat-value">5,159</span>
-                <span class="publication-stat-label"
-                  >Villages analysed across Sindh</span
-                >
-              </div>
-              <div class="publication-stat">
-                <span class="publication-stat-value">2.01×</span>
-                <span class="publication-stat-label"
-                  >Overestimate of population-weighted median travel time using
-                  open-data-only facilities</span
-                >
-              </div>
-              <div class="publication-stat">
-                <span class="publication-stat-value">10×</span>
-                <span class="publication-stat-label"
-                  >Overestimate of the population more than 30 minutes from
-                  care</span
-                >
-              </div>
-            </div>
-          </article>
-          <article class="publication-card">
-            <div class="publication-copy">
-              <div class="publication-type">Preprint · 2026</div>
-              <h3 class="publication-title">
-                Seasonally Decoupled Recovery of Flooded Cropland After the
-                2022 Sindh Floods: A Matched-Counterfactual Satellite
-                Assessment
-              </h3>
-              <p class="publication-journal">Preprints.org</p>
-              <p class="publication-meta">Arsalan Kaleem · October 2026</p>
-              <p class="publication-summary">
-                A satellite-based assessment of cropland recovery across Sindh
-                following the 2022 floods. Matching flooded and non-flooded
-                cropland cells reveals persistent vegetation deficits during
-                summer growing seasons, despite recovery in winter.
-              </p>
-              <div class="publication-links">
-                <a
-                  href="https://doi.org/10.20944/preprints202610.1600.v1"
-                  class="btn btn-solid"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor="OPEN"
-                  ><span class="btn-t">Read preprint</span></a
-                >
-                <a
-                  href="https://github.com/ArsalanKaleem/flood-recovery-sindh"
-                  class="btn btn-ghost"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cursor="VISIT"
-                  ><span class="btn-t">Code &amp; results</span></a
-                >
-              </div>
-            </div>
-            <div class="publication-findings" aria-label="Study highlights">
-              <div class="publication-stat">
-                <span class="publication-stat-value">555,309</span>
-                <span class="publication-stat-label"
-                  >Cropland cells tracked across Sindh</span
-                >
-              </div>
-              <div class="publication-stat">
-                <span class="publication-stat-value">87,447</span>
-                <span class="publication-stat-label"
-                  >Matched flooded and non-flooded cell pairs</span
-                >
-              </div>
-              <div class="publication-stat">
-                <span class="publication-stat-value">22</span>
-                <span class="publication-stat-label">Districts analysed</span>
+            <div class="shell panel-grid"><div class="panel-visual" data-cursor="VIEW"><span class="panel-bgmark">JAVA</span></div>
+              <div class="panel-info"><div class="panel-num">03 — OOP project concept</div><h3 class="panel-title">Java Password Manager</h3>
+                <p class="panel-desc">A planned Java application for organizing saved credentials. This is an academic project concept, with the design and implementation still to be developed and tested.</p>
+                <div class="panel-tags"><span class="panel-tag">Java</span><span class="panel-tag">OOP</span><span class="panel-tag">GUI concept</span></div>
+                <span class="project-status">Status: planned</span>
               </div>
             </div>
           </article>
@@ -3128,39 +2687,28 @@
           <div class="contact-grid">
             <div>
               <p class="contact-sub anim">
-                Open to freelance projects, collaborations, and full-time
-                opportunities. If you have an idea, I'd love to hear it.
+                I'm studying Information Security and experimenting with cryptographic systems.
+                For academic collaboration or project discussions, get in touch.
               </p>
               <div class="socials">
                 <a
                   class="social anim"
-                  href="mailto:arsalanabbasi.here@gmail.com"
+                  href="mailto:m61talha@gmail.com"
                   data-cursor="SEND"
                   >Email <span class="arr">↗</span></a
                 >
                 <a
                   class="social anim"
-                  href="https://github.com/ArsalanKaleem"
+                  href="https://github.com/talhawarraich61"
                   target="_blank"
                   rel="noopener"
                   data-cursor="VISIT"
                   >GitHub <span class="arr">↗</span></a
                 >
-                <a
-                  class="social anim"
-                  href="www.linkedin.com/in/arsalankaleem"
-                  target="_blank"
-                  rel="noopener"
-                  data-cursor="VISIT"
-                  >LinkedIn <span class="arr">↗</span></a
-                >
-                <a class="social anim" href="#" id="resume" data-cursor="OPEN"
-                  >Resume <span class="arr">↓</span></a
-                >
               </div>
             </div>
             <div>
-              <form class="form" id="contact-form" novalidate>
+              <form class="form" id="contact-form">
                 <div class="f-row">
                   <div class="f-field anim">
                     <label class="f-label" for="name">Name</label
@@ -3184,7 +2732,7 @@
                   </div>
                 </div>
                 <div class="f-field anim">
-                  <label class="f-label" for="message">Your project</label
+                  <label class="f-label" for="message">Message</label
                   ><textarea
                     class="f-textarea"
                     id="message"
@@ -3194,7 +2742,7 @@
                 </div>
                 <button type="submit" class="f-submit anim" data-cursor="SEND">
                   <span class="fs-t"
-                    >Send message
+                    >Compose email
                     <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
                       <path
                         d="M1 6.5h11M7.5 2l5 4.5-5 4.5"
@@ -3205,10 +2753,11 @@
                       /></svg
                   ></span>
                 </button>
+                <p class="form-note">Opens your email application. You must press Send there; this site does not store messages.</p>
               </form>
-              <div id="form-ok">
-                <div class="ok-t">Message sent ✦</div>
-                <div class="ok-s">I'll get back to you within 24 hours.</div>
+              <div id="form-ok" role="status" aria-live="polite">
+                <div class="ok-t">Email draft opened ✦</div>
+                <div class="ok-s">Your email app must send it.</div>
               </div>
             </div>
           </div>
@@ -3221,7 +2770,7 @@
       <div class="shell">
         <div class="foot-grid">
           <div class="foot-statement">
-            Building premium software, deliberately.
+            Studying algorithms, encryption, and secure systems.
           </div>
           <div class="foot-col">
             <h4>Quick links</h4>
@@ -3240,26 +2789,12 @@
               "
               >About me</a
             ><a
-              href="#skills"
+              href="#projects"
               onclick="
-                goTo('#skills');
-                return false;
-              "
-              >Services</a
-            ><a
-              href="#work"
-              onclick="
-                goTo('#work');
+                goTo('#projects');
                 return false;
               "
               >Works</a
-            ><a
-              href="#publications"
-              onclick="
-                goTo('#publications');
-                return false;
-              "
-              >Publications</a
             ><a
               href="#contact"
               onclick="
@@ -3271,29 +2806,21 @@
           </div>
           <div class="foot-col">
             <h4>Contact</h4>
-            <a href="mailto:arsalanabbasi.here@gmail.com"
-              >arsalanabbasi.here@gmail.com</a
-            >
-            <p>Shikarpur, Pakistan</p>
+            <a href="mailto:m61talha@gmail.com">m61talha@gmail.com</a>
             <a
-              href="https://github.com/ArsalanKaleem"
+              href="https://github.com/talhawarraich61"
               target="_blank"
               rel="noopener"
               >GitHub</a
-            ><a
-              href="www.linkedin.com/in/arsalankaleem"
-              target="_blank"
-              rel="noopener"
-              >LinkedIn</a
             >
           </div>
         </div>
       </div>
-      <div class="foot-word" id="foot-word" aria-label="Arsalan">Arsalan</div>
+      <div class="foot-word" id="foot-word" aria-label="GC">GC</div>
       <div class="shell">
         <div class="foot-bottom">
-          <span>© 2026 Arsalan Kaleem</span
-          ><span>Designed &amp; built by Arsalan</span>
+          <span>© 2026 GC Muhammed Talha</span
+          ><span>Customized by Talha · Original template © Arsalan Kaleem (MIT)</span>
         </div>
       </div>
     </footer>
@@ -12751,12 +12278,12 @@
           var max = document.documentElement.scrollHeight - innerHeight;
           if (hasGSAP)
             gsap.to(progress, {
-              scaleX: y / max,
+              scaleX: max > 0 ? y / max : 0,
               duration: 0.2,
               ease: "none",
               transformOrigin: "left",
             });
-          else progress.style.width = (y / max) * 100 + "%";
+          else progress.style.width = (max > 0 ? (y / max) * 100 : 0) + "%";
           var cur = "";
           sections.forEach(function (s) {
             if (y >= s.offsetTop - 200) cur = s.id;
@@ -12837,7 +12364,7 @@
             html.classList.add("theming");
             var light = html.classList.toggle("light");
             try {
-              localStorage.setItem("ak-theme", light ? "light" : "dark");
+              localStorage.setItem("talha-theme", light ? "light" : "dark");
             } catch (e) {}
             sync();
             setTimeout(function () {
@@ -13355,157 +12882,20 @@
           ScrollTrigger.refresh();
         }
 
-        /* ============ ROLE CYCLER ============ */
-        (function () {
-          var roles = [
-            "premium mobile experiences",
-            "AI-powered applications",
-            "real-time web platforms",
-            "civic technology tools",
-          ];
-          var i = 0,
-            el = document.getElementById("hero-role");
-          if (!el) return;
-          setInterval(function () {
-            i = (i + 1) % roles.length;
-            el.style.opacity = "0";
-            setTimeout(function () {
-              el.textContent = roles[i];
-              el.style.opacity = "1";
-            }, 350);
-          }, 3200);
-        })();
-
-        /* ============ CONTACT FORM ============ */
-        document
-          .getElementById("contact-form")
-          .addEventListener("submit", function (e) {
-            e.preventDefault();
-            var btn = this.querySelector(".f-submit"),
-              t = btn.querySelector(".fs-t");
-            t.textContent = "Sending…";
-            btn.style.opacity = ".7";
-            var self = this;
-            setTimeout(function () {
-              if (hasGSAP) {
-                gsap.to(self, {
-                  opacity: 0,
-                  y: -8,
-                  duration: 0.4,
-                  onComplete: done,
-                });
-              } else done();
-              function done() {
-                self.style.display = "none";
-                var ok = document.getElementById("form-ok");
-                ok.classList.add("show");
-                if (hasGSAP)
-                  gsap.from(ok, {
-                    opacity: 0,
-                    scale: 0.96,
-                    y: 10,
-                    duration: 0.5,
-                    ease: "back.out(1.5)",
-                  });
-              }
-            }, 1100);
-          });
-
-        var SHOTS = {
-          careergpt: [
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973143/1_rw2yje.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973144/3_legmnj.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973143/2_dallfn.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973143/6_gyvp6d.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973143/4_oxq7vl.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973146/9_xs1icw.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973143/5_xksmwm.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973146/9_xs1icw.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1782973147/10_ebvyma.png",
-          ],
-          simul: [
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1783853542/chrome_ZM1e5oNyMR_czlrgt.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1783853541/chrome_AwHGP1909S_gjefco.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1783853541/chrome_j32CX6cZca_kououo.png",
-          ],
-          f1vision: [
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107389/f1_vision_wmMGzfeXkz_vb599s.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107389/f1_vision_cHAJMejlkO_bvyvtx.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_aLX2csGVee_lnyhyg.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_MlM7ESAeEL_lcyl6a.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_Jh4OB93a9G_s1zz2t.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_iSo93niUZj_ae5pam.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_vVwb4jiAJi_tix9lx.png",
-            "https://res.cloudinary.com/dfd2kp7s5/image/upload/v1785107388/f1_vision_veFebSDnfZ_w6baib.png",
-          ],
-        };
-        document.querySelectorAll(".phone[data-shots]").forEach(function (ph) {
-          var key = ph.getAttribute("data-shots");
-          var urls = (SHOTS[key] || []).filter(function (u) {
-            return u && typeof u === "string" && u.indexOf("PASTE") === -1;
-          });
-          var screen = ph.querySelector(".ph-screen");
-          var dotsWrap = document.querySelector(
-            '.ph-dots[data-dots="' + key + '"]',
-          );
-          if (!urls.length) {
-            screen.classList.add("ph-empty");
-            if (dotsWrap) dotsWrap.style.display = "none";
-            return;
-          }
-          var idx = 0,
-            hover = false,
-            imgs = [],
-            dots = [];
-          urls.forEach(function (u, i) {
-            var img = document.createElement("img");
-            img.src = u;
-            img.alt = "";
-            img.loading = i ? "lazy" : "eager";
-            img.decoding = "async";
-            img.draggable = false;
-            img.className = "ph-shot" + (i ? "" : " on");
-            screen.appendChild(img);
-            imgs.push(img);
-            if (dotsWrap) {
-              var d = document.createElement("button");
-              d.type = "button";
-              d.className = "pdot" + (i ? "" : " on");
-              d.setAttribute(
-                "aria-label",
-                "Screenshot " + (i + 1) + " of " + urls.length,
-              );
-              d.addEventListener("click", function () {
-                show(i);
-              });
-              dotsWrap.appendChild(d);
-              dots.push(d);
-            }
-          });
-          function show(n) {
-            if (n === idx && imgs[idx].classList.contains("on")) return;
-            imgs[idx].classList.remove("on");
-            if (dots[idx]) dots[idx].classList.remove("on");
-            idx = (n + imgs.length) % imgs.length;
-            var im = imgs[idx];
-            im.classList.remove("on");
-            void im.offsetWidth;
-            im.classList.add("on");
-            if (dots[idx]) dots[idx].classList.add("on");
-          }
-          if (!REDUCE)
-            setInterval(function () {
-              if (!hover) show(idx + 1);
-            }, 3000);
-          var hoverEl = ph.closest(".panel-visual") || ph;
-          hoverEl.addEventListener("mouseenter", function () {
-            hover = true;
-            screen.classList.add("paused");
-          });
-          hoverEl.addEventListener("mouseleave", function () {
-            hover = false;
-            screen.classList.remove("paused");
-          });
+        /* ============ CONTACT FORM (NO BACKEND) ============ */
+        // A static GitHub Pages site cannot deliver email itself. Open an email draft instead.
+        var contactForm = document.getElementById("contact-form");
+        if (contactForm) contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!contactForm.reportValidity()) return;
+          var sender = document.getElementById("name").value.trim();
+          var senderEmail = document.getElementById("email").value.trim();
+          var message = document.getElementById("message").value.trim();
+          if (!sender || !senderEmail || !message) return;
+          var subject = encodeURIComponent("Portfolio inquiry from " + sender);
+          var body = encodeURIComponent("Name: " + sender + "\nEmail: " + senderEmail + "\n\n" + message);
+          document.getElementById("form-ok").classList.add("show");
+          window.location.href = "mailto:m61talha@gmail.com?subject=" + subject + "&body=" + body;
         });
 
         /* ============ 3D INTERACTIONS — WORK SECTION ============ */
@@ -13651,9 +13041,6 @@
             document.documentElement.style.setProperty("--accent", a);
             if (clicks === 5) toast("Accent unlocked ✦");
           }
-        });
-        document.getElementById("dot").addEventListener("click", function () {
-          toast("Yes, really available :)");
         });
         // konami
         var seq = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
