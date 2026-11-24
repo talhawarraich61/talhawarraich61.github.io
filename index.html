@@ -2417,6 +2417,22 @@
         font-family: var(--font-mono); font-size: 0.69rem;
         letter-spacing: 0.04em; text-transform: uppercase; color: var(--ash);
       }
+      /* ─── CLARITY FIX — keep portfolio crisp ─── */
+      html { -webkit-font-smoothing: auto; text-rendering: auto; }
+      /* Moving noise was covering the entire page and softening the text. */
+      .grain { display: none !important; }
+      /* Keep the floating navigation clean, without a glass blur. */
+      #nav .nav-bg {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        background: var(--ink-2);
+      }
+      html.light #nav .nav-bg { background: var(--ink-2); }
+      /* Increase contrast of secondary text without changing the design. */
+      :root { --ash: #b5b2ab; --faint: #99958c; }
+      html.light { --ash: #544f48; --faint: #716b62; }
+      /* Avoid magnifying the small original portrait image further. */
+      .portrait-img.portrait-personal { transform: none; }
     </style>
   </head>
   <body>
